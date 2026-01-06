@@ -1,0 +1,103 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  background:linear-gradient(135deg, #ff758c, #ff7eb3);
+  overflow: hidden;
+  
+}
+
+.container {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  animation: popIn 0.8s ease;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.container h1 {
+  font-size: 2.8rem;
+  color: #fff;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.container p {
+  font-size: 1.4rem;
+  color: #fff;
+  margin: 15px 0 25px;
+}
+
+
+
+.btn {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.btn a {
+  text-decoration: none;
+  padding: 15px 45px;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ff4d6d;
+  background: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+.btn a:hover {
+  transform: translateY(-6px) scale(1.05);
+  transform: rotate(180deg);
+  background: linear-gradient(135deg, #ff4d6d, #ff758c);
+  color: #fff;
+  box-shadow: 0 20px 35px rgba(0,0,0,0.35);
+}
+
+.heart {
+  position: absolute;
+  top: -50px;
+  font-size: 2rem;
+  animation: fall linear infinite;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
+.petals-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  pointer-events: none;
+}

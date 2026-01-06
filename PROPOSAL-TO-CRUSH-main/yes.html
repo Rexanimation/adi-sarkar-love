@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ask Her Out</title>
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="Sticker" style="width: 600px; height: 200px;"><img
+        src="https://media.tenor.com/BDP5eJeyZPQAAAAi/tkthao219-bubududu.gif" width="400.25833333333334" height="200"
+        alt="a brown bear and a white panda are hugging each other on a white background ." fetchpriority="high"
+        style="max-width: 105px; background-color: unset;"></div>
+
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    <h1>I knew it! You Love me a lot 😘</h1>
+  </div>
+  <div class="petals-container">
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+  </div>
+
+  <script>
+    window.addEventListener("load", () => {
+      for (let i = 0; i < 80; i++) {
+        createHeart();
+      }
+    });
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+
+      // Randomly choose between heart and kiss emojis
+      const emojis = ["❤️", "💋", "😘"];
+      heart.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (Math.random() * 8 + 2) + "s"; // 2-10 seconds
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 10000); // 10 seconds
+    }
+  </script>
+  <div class="footer">aditya the developer , copyright 2026</div>
+</body>
+
+</html>
